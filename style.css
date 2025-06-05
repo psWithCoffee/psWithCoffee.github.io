@@ -1,0 +1,244 @@
+/* Importazione font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=PT+Serif&display=swap');
+
+:root {
+  --main-bg: #f7f7f7;
+  --primary-color: #c10e3a;
+  --text-color: #333;
+  --accent-bg: #fff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --heading-font: 'DM Serif Text', serif;
+  --body-font: 'PT Serif', serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--body-font);
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 0 3cm;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #333;
+  padding: 0.8rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* HEADER */
+header {
+  background-color: var(--primary-color); /* #c10e3a, un rosso */
+  color: white;
+  padding: 2.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* SECTIONS */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 4rem 0;
+}
+
+.outside-image {
+  max-width: 250px;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  flex: 1;
+  font-family: var(--body-font);
+}
+
+.centered-image {
+  display: block;
+  margin: -1cm auto 2rem auto; /* sposta l’immagine 1cm più in alto */
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+
+.custom-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #222; /* un grigio scuro */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 1.5rem;
+  padding-left: 10px;
+  border-left: 3px solid #c10e3a; /* barra rossa a sinistra */
+}
+
+.custom-paragraph:hover {
+  color: #c10e3a;
+  transform: translateX(5px);
+  cursor: default;
+}
+
+
+
+.overview-section p:first-of-type {
+  font-weight: 500;
+  color: #555;
+}
+
+
+/* Per dare un po’ di enfasi ai primi paragrafi */
+.overview-section p:first-of-type {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+
+.feature-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  justify-content: space-between;
+}
+
+.box {
+  background-color: var(--accent-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 32%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: scale(1.02);
+}
+
+.box h2 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--heading-font);
+}
+
+.box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: var(--body-font);
+}
+
+.code-block {
+  background: #f0f0f0;
+  font-family: monospace;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid var(--primary-color);
+  margin: 0.5rem 0;
+  overflow-x: auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: auto;
+}
+
+
+
+
+
+
+  
+  
+  
+
+
+
+

@@ -1,0 +1,103 @@
+/* RESET BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'PT Serif', serif;
+    background-color: #ffffff;
+    color: #1b4332;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Barra di navigazione grigia */
+  .top-nav {
+    background-color: #333;
+    padding: 1rem 0;
+  }
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  .top-nav a:hover {
+    color: #40916c;
+  }
+  
+  .hero-header {
+    background: linear-gradient(to right, #40916c, #1b4332);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-header h1 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  
+  main.content {
+    flex: 1;
+    margin: 3cm; /* mantieni questo margine dai bordi */
+    margin-top: 1.5cm; /* riduci margine superiore per spostare tutto più in alto */
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  /* Oppure direttamente sull'intro-text */
+  .intro-text {
+    margin-top: 0; /* rimuove eventuale margine sopra */
+    padding-top: 0; /* o riduci padding se presente */
+  }
+  
+  .intro-text h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 3rem; /* più grande */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    color: #2d6a4f;
+  }
+  
+  .intro-text p {
+    font-size: 1.2rem; /* più grande */
+    line-height: 1.8;
+    color: #343a40;
+    text-align: justify;
+    margin-top: 0.3rem;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background: #1b4332;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  
+  
+  

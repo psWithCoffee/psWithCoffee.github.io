@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Raspberry Pi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=PT+Serif&display=swap" rel="stylesheet">
+  </head>
+  
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Argomento</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Raspberry Pi</h1>
+  </header>
+
+  <main> <!-- ✅ Inizio contenitore con padding laterale -->
+
+    <div class="intro-section">
+      <img src="Images/IMG_6655-Photoroom.png" alt="Raspberry Pi logo" class="outside-image" />
+      <p class="description">
+        La Raspberry Pi, riconoscibile dal simbolo del lampone, è un piccolo computer a scheda singola (single-board computer),
+        compatto ed economico, nato nel Regno Unito con l’obiettivo di favorire l’insegnamento dell’informatica nelle scuole,
+        anche nei Paesi meno sviluppati. Grande quanto una carta di credito, si collega facilmente a periferiche comuni come mouse,
+        tastiera e monitor, e supporta la connessione a Internet.
+      </p>
+    </div>
+
+    <img src="Images/Raspberry-Pi.png" alt="Raspberry Pi logo" class="centered-image" />
+    <section class="overview-section">
+      <hr>
+      <p>
+        I Raspberry Pi più diffusi includono una serie di funzionalità hardware tra cui: un sistema SoC che integra processore,
+        chipset e controller, una RAM che varia da 1 a 4 GB (DDR2 o DDR4), e quattro porte USB, di cui due USB 3.0 nel modello Pi4.
+        Sono dotati di uscite video CSI per la webcam e HDMI per il monitor, un’uscita audio, uno slot microSD per la memoria,
+        una porta Ethernet RJ45 e la connessione Wi-Fi. Inoltre, dispongono di un connettore GPIO a 40 pin per collegare dispositivi
+        hardware non USB, l’alimentazione avviene a 5 V tramite microUSB o USB-C, montano un sistema operativo Linux e presentano
+        cinque LED di stato per indicare alimentazione, sistema, rete e altre attività.
+      </p>
+    
+      <p>
+        Si alimenta tramite una porta microUSB nei modelli più vecchi, mentre i modelli più recenti (come il Raspberry Pi 4 e 5)
+        utilizzano una porta USB-C. Per applicazioni leggere, come la navigazione web o l’uso di programmi di office, può essere
+        alimentato anche tramite la porta USB di un PC. Tuttavia, per usi più impegnativi, come l’elaborazione di immagini o video,
+        è necessario un alimentatore in grado di fornire fino a 3A di corrente. Le porte USB dei computer, infatti, spesso erogano
+        correnti inferiori (circa 500 mA sui desktop e 200 mA sui portatili), insufficienti per il corretto funzionamento del
+        Raspberry Pi, il che può causare malfunzionamenti.
+      </p>
+    </section>
+    
+    <section class="feature-boxes">
+      <div class="box">
+        <h2>1. Sistemi operativi disponibili</h2>
+        <p>
+          Il Raspberry Pi può eseguire diversi sistemi operativi basati su GNU/Linux, scaricabili tramite il Raspberry Pi Imager.
+          Il più diffuso è <strong>Raspberry Pi OS</strong>, completo di interfaccia grafica, driver e software preinstallati come
+          LibreOffice, Midori e IDLE. <em>NOOBS</em> è una valida alternativa per installazioni semplificate.
+        </p>
+        <p class="code-block"><code>Requisiti: microSD ≥ 8GB, 5V/2.5–3A, HDMI, tastiera, rete</code></p>
+      </div>
+    
+      <div class="box">
+        <h2>2. Configurazione della rete</h2>
+        <p>
+          Il Raspberry Pi si connette via Ethernet o Wi-Fi. Per IP statici, serve modificare i file di configurazione nella CLI:
+        </p>
+        <p class="code-block">
+          <code>/etc/network/interfaces</code><br/>
+          <code>/etc/resolv.conf</code>
+        </p>
+        <p>
+          Per configurazione dinamica (DHCP): <code>iface eth0 inet dhcp</code>
+        </p>
+      </div>
+    
+      <div class="box">
+        <h2>3. Modalità e community</h2>
+        <p>
+          Supporta modalità testuale (CLI) e grafica (GUI), attivabili con <code>startx</code>. Si gestisce il software con APT:
+        </p>
+        <p class="code-block">
+          <code>sudo apt-get update</code><br/>
+          <code>sudo apt-get upgrade</code>
+        </p>
+        <p>
+          Il sistema è multiutente: <code>pi</code> ha privilegi sudo. Tutto è gratuito e supportato dalla community.
+        </p>
+      </div>
+    </section>
+    
+   
+
+  </main> <!-- ✅ Fine contenitore -->
+
+
+  <footer>
+    <p>© 2025 Raspberry Pi. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
+
+
