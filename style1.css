@@ -25,7 +25,7 @@
     flex-direction: column;
   }
   
-  /* Navbar */
+  
   .navbar {
     background-color: #333;
     padding: 0.8rem 0;
@@ -52,7 +52,7 @@
     color: var(--primary-color);
   }
   
-  /* Header con immagine, centrato */
+  
   .hero-header {
     background-color: var(--primary-color);
     background-image: url('Images/📺.jpg'); /* Cambia con il tuo percorso */
@@ -70,7 +70,7 @@
   
   .hero-header h1 {
     font-family: var(--heading-font);
-    font-size: 1.8rem; /* più piccolo */
+    font-size: 1.8rem; 
     font-weight: 700;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -78,7 +78,7 @@
     padding: 0 3cm;
   }
   
-  /* Contenuto principale */
+  
   main.content {
     flex: 1 0 auto;
     padding: 0 3cm;
@@ -107,7 +107,7 @@
     background-color: #1b4332;
     color: white;
     padding: 2rem 0;
-    text-align: center; /* Questo centra il testo */
+    text-align: center; 
     font-size: 1.1rem;
   }
   
