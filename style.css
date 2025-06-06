@@ -1,6 +1,3 @@
-/* Importazione font da Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=PT+Serif&display=swap');
-
 :root {
   --main-bg: #f7f7f7;
   --primary-color: #c10e3a;
@@ -12,18 +9,18 @@
   --body-font: 'PT Serif', serif;
 }
 
-html, body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
+}
+
+body {
   font-family: var(--body-font);
   background-color: var(--main-bg);
   color: var(--text-color);
   line-height: 1.6;
-  box-sizing: border-box;
-}
-
-body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +32,6 @@ main {
   margin-bottom: 4rem;
 }
 
-/* NAVBAR */
 .navbar {
   background-color: #333;
   padding: 0.8rem 0;
@@ -45,8 +41,6 @@ main {
 
 .navbar ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -64,14 +58,12 @@ main {
   color: var(--primary-color);
 }
 
-/* HEADER */
 header {
-  background-color: var(--primary-color); /* #c10e3a, un rosso */
+  background-color: var(--primary-color);
   color: white;
   padding: 2.5rem 0;
   text-align: center;
   box-shadow: var(--shadow);
-  margin: 0;
 }
 
 header h1 {
@@ -79,10 +71,9 @@ header h1 {
   font-size: 4rem;
   font-weight: 700;
   margin: 0;
-  line-height: 1.2;
+  color: white; 
 }
 
-/* HEADINGS */
 h1, h2, h3 {
   font-family: var(--heading-font);
   font-weight: 700;
@@ -90,24 +81,12 @@ h1, h2, h3 {
   line-height: 1.3;
 }
 
-h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* SECTIONS */
 .intro-section {
   display: flex;
   align-items: center;
@@ -117,65 +96,43 @@ h3 {
 
 .outside-image {
   max-width: 250px;
-  flex-shrink: 0;
   height: auto;
+  flex-shrink: 0;
 }
 
 .description {
   font-size: 1.1rem;
-  line-height: 1.6;
   text-align: justify;
-  flex: 1;
-  font-family: var(--body-font);
 }
 
 .centered-image {
   display: block;
-  margin: -1cm auto 2rem auto; /* sposta l’immagine 1cm più in alto */
+  margin: -2cm auto 2rem auto; 
   max-width: 500px;
   width: 100%;
   height: auto;
 }
 
+.text-width-hr {
+  border: none;
+  height: 1.5px;
+  background-color: red;
+  width: 100%;
+  margin: 2rem 0;
+}
 
-.custom-paragraph {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #222; /* un grigio scuro */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-  transition: color 0.3s ease, transform 0.3s ease;
+
+.overview-section p {
   margin-bottom: 1.5rem;
-  padding-left: 10px;
-  border-left: 3px solid #c10e3a; /* barra rossa a sinistra */
+  font-size: 1.05rem;
+  text-align: justify;
 }
-
-.custom-paragraph:hover {
-  color: #c10e3a;
-  transform: translateX(5px);
-  cursor: default;
-}
-
-
-
-.overview-section p:first-of-type {
-  font-weight: 500;
-  color: #555;
-}
-
-
-/* Per dare un po’ di enfasi ai primi paragrafi */
-.overview-section p:first-of-type {
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
 
 .feature-boxes {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 5rem;
   justify-content: space-between;
 }
 
@@ -187,7 +144,6 @@ h3 {
   flex: 1;
   min-width: 280px;
   max-width: 32%;
-  box-sizing: border-box;
   transition: transform 0.2s ease;
 }
 
@@ -196,19 +152,14 @@ h3 {
 }
 
 .box h2 {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
-  font-family: var(--heading-font);
 }
 
 .box p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-family: var(--body-font);
 }
 
 .code-block {
@@ -220,7 +171,6 @@ h3 {
   overflow-x: auto;
 }
 
-/* FOOTER */
 footer {
   background-color: var(--primary-color);
   color: #ffffff;

@@ -1,102 +1,118 @@
-/* RESET BASE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --main-bg: #f7f7f7;
+    --primary-color: #1b4332; /* Verde scuro */
+    --text-color: #333;
+    --accent-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --heading-font: 'DM Serif Text', serif;
+    --body-font: 'PT Serif', serif;
   }
   
-  html, body {
-    height: 100%;
-    font-family: 'PT Serif', serif;
-    background-color: #ffffff;
-    color: #1b4332;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
   body {
+    font-family: var(--body-font);
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
   }
   
-  /* Barra di navigazione grigia */
-  .top-nav {
+  /* Navbar */
+  .navbar {
     background-color: #333;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
   }
-  .top-nav ul {
+  
+  .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
-  }
-  .top-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  .top-nav a:hover {
-    color: #40916c;
+    gap: 3rem;
   }
   
-  .hero-header {
-    background: linear-gradient(to right, #40916c, #1b4332);
+  .navbar a {
     color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Header con immagine, centrato */
+  .hero-header {
+    background-color: var(--primary-color);
+    background-image: url('Images/📺.jpg'); /* Cambia con il tuo percorso */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    padding: 0 3cm;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 6rem 2rem;
-    position: relative;
-    z-index: 1;
   }
   
   .hero-header h1 {
-    font-family: 'DM Serif Text', serif;
-    font-size: 5rem;
+    font-family: var(--heading-font);
+    font-size: 1.8rem; /* più piccolo */
     font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 1.2;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+    padding: 0 3cm;
   }
   
+  /* Contenuto principale */
   main.content {
-    flex: 1;
-    margin: 3cm; /* mantieni questo margine dai bordi */
-    margin-top: 1.5cm; /* riduci margine superiore per spostare tutto più in alto */
-    line-height: 1.8;
-    font-size: 1.1rem;
-  }
-  
-  /* Oppure direttamente sull'intro-text */
-  .intro-text {
-    margin-top: 0; /* rimuove eventuale margine sopra */
-    padding-top: 0; /* o riduci padding se presente */
+    flex: 1 0 auto;
+    padding: 0 3cm;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
   }
   
   .intro-text h2 {
-    font-family: 'PT Serif', serif;
-    font-size: 3rem; /* più grande */
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.7rem;
-    color: #2d6a4f;
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1b4332;      
+    font-weight: bold;   
   }
   
   .intro-text p {
-    font-size: 1.2rem; /* più grande */
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #343a40;
-    text-align: justify;
-    margin-top: 0.3rem;
+    text-align: left;
   }
   
-  
-  /* Footer */
+
   footer {
-    background: #1b4332;
+    background-color: #1b4332;
     color: white;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    padding: 2rem 0;
+    text-align: center; /* Questo centra il testo */
+    font-size: 1.1rem;
   }
+  
+  
+  
   
   
   
